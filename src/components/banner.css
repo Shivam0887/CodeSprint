@@ -1,0 +1,43 @@
+.banner {
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  justify-content: space-between;
+  grid-template-columns: 2fr 1fr;
+}
+.content {
+  margin-top: 8rem;
+  width: 40vw;
+}
+.img-container {
+  margin-top: 8rem;
+  width: 40vw;
+}
+.img-container img {
+  width: 30vw;
+}
+.heading {
+  font-size: 5rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+.content p {
+  color: rgb(208, 212, 251);
+}
+.btn {
+  margin: 1rem 0;
+  border: transparent;
+  background: rgb(245, 150, 26);
+  color: white;
+  border-radius: 1rem;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  padding: 0.3rem 0.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: rgb(255, 167, 52);
+}
