@@ -8,26 +8,27 @@ nav {
   /* box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.4); */
 }
 .title {
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
   font-size: 1.2rem;
   color: white;
+  cursor: pointer;
 }
 .nav-links {
   display: flex;
 }
 .nav-links p {
-  background: rgba(255, 255, 255, 0.4);
-  color: rgb(255, 255, 255);
-  border-radius: 1rem;
+  color: white;
+  border-radius: 5rem;
   font-weight: 500;
   font-size: 1.1rem;
   letter-spacing: 0.1rem;
   margin: auto 0.5rem;
-  padding: 0.2rem 0.5rem;
+  padding: 0.1rem 0.5rem;
   line-height: 1.5;
   text-align: center;
   cursor: pointer;
 }
 .nav-links p:hover {
-  background: rgb(245, 150, 26);
+  /* background: rgb(250, 150, 26); */
+  background: rgba(255, 255, 255, 0.4);
 }
