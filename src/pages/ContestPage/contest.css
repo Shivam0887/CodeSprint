@@ -61,11 +61,6 @@ a {
   box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.4);
 }
 .header {
-  background: url('./../../components/cardBanner/banners/b1.jpg');
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: inherit;
   height: 100px;
   border-radius: 0.5rem 0.5rem 0 0;
 }
@@ -103,23 +98,23 @@ a {
   color: rgb(250, 150, 26);
 }
 /* width */
-::-webkit-scrollbar {
+.container::-webkit-scrollbar {
   width: 10px;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
+.container::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 0.5rem;
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+.container::-webkit-scrollbar-thumb {
   background: rgb(204, 204, 240);
   border-radius: 0.5rem;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+.container::-webkit-scrollbar-thumb:hover {
   background: rgb(177, 177, 246);
 }

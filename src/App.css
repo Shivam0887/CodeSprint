@@ -1,6 +1,26 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  scroll-behavior: smooth;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(246, 235, 235);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(207, 207, 209);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(190, 190, 192);
 }
 body {
   background-color: #4158d0;

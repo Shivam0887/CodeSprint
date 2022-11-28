@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react'
 import Spinner from './../../components/Spinner/Spinner'
 import { CardBanner } from '../../components/cardBanner/CardBanner'
 import './contest.css'
-import lt from './../../logos/lt.svg'
-import cc from './../../logos/cc-logo.svg'
-import cf from './../../logos/cf.png'
-import he from './../../logos/he.svg'
-import hr from './../../logos/hr.svg'
+import lt from './../../assets/logos/lt.svg'
+import cc from './../../assets/logos/cc-logo.svg'
+import cf from './../../assets/logos/cf.png'
+import he from './../../assets/logos/he.svg'
+import hr from './../../assets/logos/hr.svg'
 
 const Contest = () => {
   const [codingSite, setCodingSite] = useState('leet_code')

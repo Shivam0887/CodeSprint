@@ -12,6 +12,8 @@ nav {
   font-size: 1.2rem;
   color: white;
   cursor: pointer;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .nav-links {
   display: flex;
@@ -31,4 +33,7 @@ nav {
 .nav-links p:hover {
   /* background: rgb(250, 150, 26); */
   background: rgba(255, 255, 255, 0.4);
+}
+.clicked {
+  background: orangered;
 }

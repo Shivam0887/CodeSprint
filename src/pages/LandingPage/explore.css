@@ -1,0 +1,73 @@
+.explore {
+  height: 100vh;
+  /* display: grid; */
+  /* place-content: center; */
+}
+.explore h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  letter-spacing: 0.2rem;
+  font-style: oblique;
+  /* border: 3px dotted darkblue; */
+}
+.explore-container {
+  margin: 1rem;
+  display: grid;
+  place-content: center;
+  min-width: 450px;
+  min-height: 260px;
+  color: black;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 5px black;
+}
+.exploreCard {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 400px;
+  height: 200px;
+  border-radius: 0.3rem;
+  text-align: center;
+}
+.exploreCard h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: darkblue;
+}
+.exploreCard p {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1rem 0.5rem;
+  color: black;
+  font-weight: 500;
+}
+.exp-btn {
+  border: transparent;
+  background: #ffa704;
+  color: white;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.06rem;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.5);
+}
+.exp-btn:hover {
+  background: #fdb227;
+}
+.underline {
+  display: grid;
+  margin: 1rem auto;
+  background-color: darkblue;
+  height: 0.3rem;
+  width: 15rem;
+}
+.carousel {
+  cursor: grab;
+  margin: 3rem;
+  overflow: hidden;
+}
+.inner-carousel {
+  display: flex;
+}
