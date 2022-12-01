@@ -1,5 +1,5 @@
 # CodeSprint
-## Get! Set! Code...
+### Get! Set! Code...
 ## Tech Stack Used:
 HTML5, CSS3, JavaScript, ReactJs
 ### 1. clone the repo
