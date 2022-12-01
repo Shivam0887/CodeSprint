@@ -51,6 +51,7 @@
   line-height: 1.6;
   letter-spacing: 0.06rem;
   cursor: pointer;
+  padding: 0.3rem 1rem;
   box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.5);
 }
 .exp-btn:hover {

@@ -1,0 +1,130 @@
+.course__container {
+  position: relative;
+  background: transparent;
+  min-height: 100vh;
+  padding-bottom: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  margin: 0 1rem;
+}
+
+.course__item {
+  display: block;
+  border-radius: 10px;
+  width: 70vw;
+  margin: 15px auto 0px;
+}
+
+.course__item > h3 {
+  margin: 0.5rem;
+  background: orangered;
+  border-radius: 0.3rem;
+  line-height: 1.6;
+  padding: 0.1rem 0.5rem;
+  color: whitesmoke;
+  width: fit-content;
+}
+
+.course__item .frame__container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.btn__container {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  position: sticky;
+  top: -5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.btn__course {
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: 600;
+  color: darkblue;
+  letter-spacing: 0.09 rem;
+  border: transparent;
+  border-radius: 10px;
+  padding: 8px;
+  margin-left: 1rem;
+  line-height: 1.6;
+}
+
+.hide {
+  display: none;
+}
+
+iframe {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px black;
+}
+
+.skeleton__loading1,
+.skeleton__loading2 {
+  box-sizing: border-box;
+  height: 250px;
+  width: 390px;
+  padding-top: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: absolute;
+  background: rgb(60, 60, 60);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.circle,
+.para,
+.play {
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  animation: blink 0.7s infinite ease-in-out;
+  background: rgb(30, 30, 30);
+}
+
+.para {
+  height: 20px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.play {
+  height: 50px;
+  width: 65px;
+  border-radius: 25% 25%;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.skeleton__loading1 {
+  left: 21%;
+}
+
+.skeleton__loading2 {
+  right: 21%;
+}
+
+@keyframes blink {
+  50% {
+    background: rgb(40, 40, 40, 0.7);
+  }
+  100% {
+    background: rgb(30, 30, 30);
+  }
+}
+
+@media screen and (max-width: 835px) {
+  iframe {
+    margin-bottom: 15px;
+  }
+}

@@ -11,7 +11,7 @@ const Nav = ({ select, setSelect }) => {
           </div>
         </Link>
         <div className='nav-links'>
-          <Link to='#'>
+          <Link to='/Practice'>
             <p
               className={select == 'Practice' ? 'clicked' : ''}
               onClick={() => setSelect('Practice')}
@@ -27,7 +27,7 @@ const Nav = ({ select, setSelect }) => {
               Contest
             </p>
           </Link>
-          <Link to='#'>
+          <Link to='/Courses'>
             <p
               className={select == 'Courses' ? 'clicked' : ''}
               onClick={() => setSelect('Courses')}

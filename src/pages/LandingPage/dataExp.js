@@ -7,7 +7,7 @@ export const dataExp = [
     feature: 'Practice',
     desc: 'Hone your problem solving skills by solving the curated list of DSA prepared by the experts.',
     action: "Let's Solve",
-    link: '/#',
+    link: '/Practice',
   },
   {
     bg: bg1,
@@ -21,6 +21,6 @@ export const dataExp = [
     feature: 'Courses',
     desc: 'Hone your problem solving skills by solving the curated list of DSA prepared by the experts.',
     action: "Let's Learn",
-    link: './#',
+    link: '/Courses',
   },
 ]

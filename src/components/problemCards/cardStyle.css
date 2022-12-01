@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.card1 {
+  border-radius: 10px;
+  padding: 40px 20px;
+  color: #000;
+  background-color: white;
+  transition: transform 0.1s ease-in;
+}
+
+.card1 > div {
+  line-height: 1.5;
+}
+
+.card1 span {
+  font-size: 0.8rem;
+  color: lightskyblue;
+  animation: color 0.7s infinite ease-in-out forwards;
+}
+
+.card1:hover {
+  transform: scale(1.1, 1.1);
+}
+
+@keyframes color {
+  from {
+    color: lightskyblue;
+  }
+  to {
+    color: orangered;
+  }
+}
+
+@media (max-width: 1160px) {
+  .card1 {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .card1 {
+    text-align: center;
+    padding: 5px;
+  }
+}

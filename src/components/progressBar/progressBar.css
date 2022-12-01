@@ -1,0 +1,45 @@
+.progress__bar__container {
+  overflow: hidden;
+  height: 8px;
+  width: 60vw;
+  margin: 60px auto 0;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.progress__bar__1,
+.progress__bar__2 {
+  position: absolute;
+  height: 100%;
+  width: 80vw;
+  border-radius: 10px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgb(30, 120, 30) 0px,
+    rgb(30, 120, 30) 5px,
+    rgb(71, 180, 96) 5px,
+    rgb(71, 180, 96) 9px
+  );
+}
+
+.move {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 30%;
+  border-radius: 10px;
+}
+
+.progress__bar__1 {
+  animation: move 30s linear 13s infinite;
+}
+
+.progress__bar__2 {
+  animation: move 30s linear infinite;
+}
+
+@keyframes move {
+  100% {
+    transform: translateX(-110%);
+  }
+}
