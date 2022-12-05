@@ -12,14 +12,14 @@ export const dataExp = [
   {
     bg: bg1,
     feature: 'Contest',
-    desc: 'Hone your problem solving skills by solving the curated list of DSA prepared by the experts.',
+    desc: 'Participate in a coding contest to check your readiness for placements.',
     action: "Let's Compete",
     link: '/Contest',
   },
   {
     bg: bg3,
     feature: 'Courses',
-    desc: 'Hone your problem solving skills by solving the curated list of DSA prepared by the experts.',
+    desc: 'Explore the handpicked courses and learn from the best courses out there.',
     action: "Let's Learn",
     link: '/Courses',
   },

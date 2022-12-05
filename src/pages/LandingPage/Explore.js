@@ -8,7 +8,7 @@ const Explore = ({ setSelect }) => {
   const [width, setWidth] = useState()
   const carousel = useRef()
   useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth + 10)
+    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth + 20)
   }, [])
   return (
     <div className='explore' id='exp'>
