@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import {content, courses} from './CourseData';
 
+import GoToTop from '../../components/GoToTop'
 import './course.css'
 
 const Course = () => {
@@ -113,6 +114,7 @@ const Course = () => {
         ))}
       </div>
       {data}
+      <GoToTop />
     </div>
   )
 }

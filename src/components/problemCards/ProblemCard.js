@@ -1,16 +1,17 @@
-import "./style.css";
-import { Link } from "react-router-dom";
-import Card from "./Card";
+import './style.css'
+import { Link } from 'react-router-dom'
+import GoToTop from '../GoToTop'
+import Card from './Card'
 
 function ProblemCard({ callback }) {
   return (
-    <div className="container__">
+    <div className='container__'>
       <h1
         style={{
-          textAlign: "center",
-          color: "whitesmoke",
-          marginTop: "20px",
-          userSelect: "none",
+          textAlign: 'center',
+          color: 'whitesmoke',
+          marginTop: '20px',
+          userSelect: 'none',
         }}
       >
         DSA SDE-SHEET
@@ -26,8 +27,9 @@ function ProblemCard({ callback }) {
           <Card title="Shradha Didi" totalProblems="350+" />
         </Link>
       </div>
+      <GoToTop />
     </div>
-  );
+  )
 }
 
-export default ProblemCard;
+export default ProblemCard

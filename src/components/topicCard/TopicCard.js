@@ -1,6 +1,7 @@
 import './topicCard.css'
 import { Link } from 'react-router-dom'
 import { AiFillLinkedin, AiFillYoutube } from 'react-icons/ai'
+import GoToTop from '../GoToTop'
 import ProgressBar from '../progressBar/ProgressBar'
 
 const TopicCard = ({ data, linkedIn, yt, image }) => {
@@ -92,6 +93,7 @@ const TopicCard = ({ data, linkedIn, yt, image }) => {
       </div>
       </div>
       <div className='grid__container'>{arr}</div>
+      <GoToTop />
     </div>
   )
 }

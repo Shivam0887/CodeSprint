@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Spinner from './../../components/Spinner/Spinner'
 import { CardBanner } from '../../components/cardBanner/CardBanner'
+import GoToTop from '../../components/GoToTop'
 import './contest.css'
 import lt from './../../assets/logos/lt.svg'
 import cc from './../../assets/logos/cc-logo.svg'
@@ -124,7 +125,7 @@ const Contest = () => {
                     />
                   </div>
                   <article className='contestDetails'>
-                    <a href={detail.url} target='_blank'>
+                    <a href={detail.url} target='_blank' rel='noreferrer nooperner'>
                       {detail.name.replace(/[\u200B]/, codingSite)}
                     </a>
                     <p>{getStartTime(detail.start_time)}</p>
@@ -135,6 +136,7 @@ const Contest = () => {
             )
           })}
       </div>
+      <GoToTop />
     </div>
   )
 }
