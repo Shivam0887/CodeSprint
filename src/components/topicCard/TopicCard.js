@@ -52,6 +52,7 @@ const TopicCard = ({ data, linkedIn, yt, image }) => {
 
   return (
     <div className='div-container'>
+      <div className='sticky__'>
       <div className='author__detail'>
         <img
           src={image}
@@ -89,7 +90,8 @@ const TopicCard = ({ data, linkedIn, yt, image }) => {
         )}%)`}</h2>
         <ProgressBar progress={calculate(totalDone, totalQuestions)} />
       </div>
-      <div className='grid__container'>{arr}</div>;
+      </div>
+      <div className='grid__container'>{arr}</div>
     </div>
   )
 }

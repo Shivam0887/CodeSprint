@@ -1,7 +1,3 @@
-* {
-  user-select: none;
-  box-sizing: border-box;
-}
 .div-container {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 0.5rem;
@@ -76,6 +72,7 @@ i {
   display: flex;
   justify-content: center;
 }
+
 
 @media (max-width: 580px) {
   .grid__container {
