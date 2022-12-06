@@ -37,7 +37,7 @@ a {
 .selected {
   background: rgba(255, 255, 255, 0.276);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-  border-radius: 1.5rem;
+  border-radius: 1rem 0 1rem 0;
 }
 .contests {
   /* background: rgba(255, 255, 255, 0.8); */
@@ -157,6 +157,9 @@ a {
   }
   .contestDetails a {
     font-size: 1.2rem;
+  }
+  .selected {
+    border-radius: 1.5rem;
   }
 }
 @media screen and (max-width: 550px) {
