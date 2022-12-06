@@ -19,7 +19,7 @@ export const CardBanner = ({ idx }) => {
         backgroundPosition: 'right',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        width: 'inherit',
+        width: '100%',
         height: '100px',
         borderTopLeftRadius: '0.5rem',
         borderTopRightRadius: '0.5rem',
