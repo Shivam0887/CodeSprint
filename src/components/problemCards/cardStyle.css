@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-evenly;
   height: 180px;
-  width: 350px;
+  width: 450px;
   color: whitesmoke;
   border-radius: 10px;
   background-image: url('../../assets/expBg/4.jpg');
@@ -29,15 +29,20 @@
   }
 }
 
-@media (max-width: 769px){
+@media (max-width: 1070px){
   .card1{
-    width: 65vw;
-    height: 150px;
+    width: 40vw;
+    height: 170px;
+  }
+}
+
+@media (max-width: 769px) {
+  .card1{
+    width: 60vw;
   }
 }
 
 @media (max-width: 426px){
-  .card1
   .card1 > h1{
     font-size: 1.5rem;
   }
