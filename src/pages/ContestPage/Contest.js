@@ -15,24 +15,22 @@ const Contest = () => {
   const [details, setDetails] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   const url = `https://clist.by/api/v2/contest/?username=nitinpasricha&api_key=0c4f617581baa5f995bcbfcdfaf4c9d3a995df0c&host=${codingSite}&upcoming=true&format=json`
-  const fetchData = async () => {
-    const data = await fetch(`https://proxy-qggl.onrender.com/`, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify({
-        type: 'GET',
-        url: url,
-      }),
-    })
-    const response = await data.json()
-    console.log(data.status)
-    console.log(response.data.objects)
-    setDetails(response.data.objects)
-    setIsLoading(false)
-  }
   useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetch(`https://proxy-qggl.onrender.com/`, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'GET',
+          url: url,
+        }),
+      })
+      const response = await data.json()
+      setDetails(response.data.objects)
+      setIsLoading(false)
+    }
     fetchData()
   }, [codingSite])
   const getStartTime = (time) => {
