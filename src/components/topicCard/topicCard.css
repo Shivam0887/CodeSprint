@@ -82,6 +82,7 @@ i {
   justify-content: center;
 }
 
+
 @media (max-width: 580px) {
   .grid__container {
     height: 300vh;

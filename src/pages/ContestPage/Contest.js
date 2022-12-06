@@ -128,7 +128,7 @@ const Contest = () => {
                     />
                   </div>
                   <article className='contestDetails'>
-                    <a href={detail.url} target='_blank'>
+                    <a href={detail.url} target='_blank' rel='noreferrer nooperner'>
                       {detail.name.replace(/[\u200B]/, codingSite)}
                     </a>
                     <p>{getStartTime(detail.start_time)}</p>

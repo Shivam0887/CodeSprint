@@ -1,22 +1,19 @@
 .banner {
-  width: 100vw;
   height: 100vh;
-  display: grid;
-  place-items: center;
-  justify-content: space-between;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .content {
-  width: 40vw;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.img-container {
-  width: 40vw;
-}
+
 .img-container img {
   width: 30vw;
 }
+
 .heading {
   font-size: 5rem;
   letter-spacing: 0.2rem;
@@ -48,4 +45,16 @@
 }
 .arrow {
   margin: auto;
+}
+
+@media (max-width: 757px){
+  .content .heading{
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 413px){
+  .img-container{
+    align-self: flex-start;
+  }
 }

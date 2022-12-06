@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import './nav.css'
 const Nav = ({ select, setSelect }) => {
-  // useEffect(()=>{},[select])
   return (
     <nav>
       <div className='navbar'>
@@ -13,7 +12,7 @@ const Nav = ({ select, setSelect }) => {
         <div className='nav-links'>
           <Link to='/Practice'>
             <p
-              className={select == 'Practice' ? 'clicked' : ''}
+              className={select === 'Practice' ? 'clicked' : ''}
               onClick={() => setSelect('Practice')}
             >
               Practice
@@ -21,7 +20,7 @@ const Nav = ({ select, setSelect }) => {
           </Link>
           <Link to='/Contest'>
             <p
-              className={select == 'Contest' ? 'clicked' : ''}
+              className={select === 'Contest' ? 'clicked' : ''}
               onClick={() => setSelect('Contest')}
             >
               Contest
@@ -29,7 +28,7 @@ const Nav = ({ select, setSelect }) => {
           </Link>
           <Link to='/Courses'>
             <p
-              className={select == 'Courses' ? 'clicked' : ''}
+              className={select === 'Courses' ? 'clicked' : ''}
               onClick={() => setSelect('Courses')}
             >
               Courses

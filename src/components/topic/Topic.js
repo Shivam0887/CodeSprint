@@ -102,10 +102,10 @@ const Topic = ({ Data, updateData, author }) => {
   }
 
   return (
-    <div className='row-container'>
-      <h3 style={{ color: 'lightgreen', lineHeight: '2' }}>Category: {type}</h3>
-      <div className='searching'>
-        <FcSearch style={{ marginLeft: '5px' }} />
+    <div className="row-container">
+      <h3 style={{ color: "green", lineHeight: "2" }}>Category: {type}</h3>
+      <div className="searching">
+        <FcSearch style={{ marginLeft: "5px" }} />
         <input
           ref={inputRef}
           type='text'
