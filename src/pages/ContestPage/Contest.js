@@ -14,8 +14,8 @@ const Contest = () => {
   const [codingSite, setCodingSite] = useState('leetcode.com')
   const [details, setDetails] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  const url = `https://clist.by/api/v2/contest/?username=nitinpasricha&api_key=0c4f617581baa5f995bcbfcdfaf4c9d3a995df0c&host=${codingSite}&upcoming=true&format=json`
   useEffect(() => {
+    const url = `https://clist.by/api/v2/contest/?username=nitinpasricha&api_key=0c4f617581baa5f995bcbfcdfaf4c9d3a995df0c&host=${codingSite}&upcoming=true&format=json`
     const fetchData = async () => {
       const data = await fetch(`https://proxy-qggl.onrender.com/`, {
         method: 'POST',

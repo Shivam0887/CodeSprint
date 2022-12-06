@@ -11,6 +11,28 @@ const Topic = ({ Data, updateData, author }) => {
   const inputRef = useRef('')
 
   useEffect(() => {
+    //Change event handler
+    function handleChange(isDone, index, topicName) {
+      let newDoneQuestion = 0
+      let key = topicName.replace(/[^A-Z]+/gi, '').toLowerCase()
+      for (let i = 0; i < Data.questions.length; i++) {
+        if (Data.questions[i].Done) newDoneQuestion++
+      }
+
+      Data.questions[index].Done = isDone
+      newDoneQuestion = isDone ? newDoneQuestion + 1 : newDoneQuestion - 1
+
+      updateData(
+        key,
+        {
+          started: newDoneQuestion ? true : false,
+          doneQuestions: newDoneQuestion,
+          questions: Data.questions,
+        },
+        Data.position,
+        author
+      )
+    }
     if (Data !== undefined) {
       const questionLink = Data.questions.map((info, index) => {
         const value = info.Topic.replace(/[^A-Z]+/gi, '').toLowerCase() + index
@@ -54,29 +76,6 @@ const Topic = ({ Data, updateData, author }) => {
     }
   }, [Data])
 
-  //Change event handler
-  function handleChange(isDone, index, topicName) {
-    let newDoneQuestion = 0
-    let key = topicName.replace(/[^A-Z]+/gi, '').toLowerCase()
-    for (let i = 0; i < Data.questions.length; i++) {
-      if (Data.questions[i].Done) newDoneQuestion++
-    }
-
-    Data.questions[index].Done = isDone
-    newDoneQuestion = isDone ? newDoneQuestion + 1 : newDoneQuestion - 1
-
-    updateData(
-      key,
-      {
-        started: newDoneQuestion ? true : false,
-        doneQuestions: newDoneQuestion,
-        questions: Data.questions,
-      },
-      Data.position,
-      author
-    )
-  }
-
   //Search handler
   function handleSearch(e) {
     const pattern = e.target.value
@@ -102,10 +101,10 @@ const Topic = ({ Data, updateData, author }) => {
   }
 
   return (
-    <div className="row-container">
-      <h3 style={{ color: "green", lineHeight: "2" }}>Category: {type}</h3>
-      <div className="searching">
-        <FcSearch style={{ marginLeft: "5px" }} />
+    <div className='row-container'>
+      <h3 style={{ color: 'green', lineHeight: '2' }}>Category: {type}</h3>
+      <div className='searching'>
+        <FcSearch style={{ marginLeft: '5px' }} />
         <input
           ref={inputRef}
           type='text'
