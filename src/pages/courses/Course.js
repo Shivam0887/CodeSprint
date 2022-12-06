@@ -38,6 +38,18 @@ const Course = () => {
     },
   ]
 
+  //handleFrameLoad
+  const handleFrameLoad = () => {
+    const loading1 = document.getElementsByClassName('skeleton__loading1')
+    const loading2 = document.getElementsByClassName('skeleton__loading2')
+
+    for (let i = 0; i < loading1.length; i++) {
+      console.log(i)
+      loading1[i].remove()
+      loading2[i].remove()
+    }
+  }
+
   const handleClick = (e) => {
     const select = e.target.id
 
@@ -98,6 +110,7 @@ const Course = () => {
                 frameBorder='0'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                 allowFullScreen
+                onLoad={handleFrameLoad}
               ></iframe>
             </div>
           </div>
@@ -106,19 +119,19 @@ const Course = () => {
       setData((prev) => [...prev, topic])
     })
 
-    const id = setTimeout(() => {
-      const loading1 = document.getElementsByClassName('skeleton__loading1')
-      const loading2 = document.getElementsByClassName('skeleton__loading2')
+    // const id = setTimeout(() => {
+    //   const loading1 = document.getElementsByClassName('skeleton__loading1')
+    //   const loading2 = document.getElementsByClassName('skeleton__loading2')
 
-      for (let i = 0; i < loading1.length; i++) {
-        loading1[i].classList.add('hide')
-        loading2[i].classList.add('hide')
-      }
-    }, 5000)
+    //   for (let i = 0; i < loading1.length; i++) {
+    //     loading1[i].classList.add('hide')
+    //     loading2[i].classList.add('hide')
+    //   }
+    // }, 5000)
 
-    return () => {
-      clearInterval(id)
-    }
+    // return () => {
+    //   clearInterval(id)
+    // }
   }, [])
 
   return (

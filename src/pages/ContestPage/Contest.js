@@ -14,9 +14,12 @@ const Contest = () => {
   const [details, setDetails] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   const url = `https://www.kontests.net/api/v1/${codingSite}`
+  const url2 =
+    'https://clist.by/api/v2/contest/?username=nitinpasricha&api_key=0c4f617581baa5f995bcbfcdfaf4c9d3a995df0c&host=leetcode.com&upcoming=true&format=json'
   const fetchData = async () => {
-    const data = await fetch(url)
+    const data = await fetch(url2)
     const response = await data.json()
+    console.log(response)
     setDetails(response)
     setIsLoading(false)
   }
