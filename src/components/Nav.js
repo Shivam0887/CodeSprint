@@ -4,11 +4,11 @@ const Nav = ({ select, setSelect }) => {
   return (
     <nav>
       <div className='navbar'>
-        <Link to='/'>
-          <div className='title' onClick={() => setSelect('codesprint')}>
+        <div className='title' onClick={() => setSelect('codesprint')}>
+          <Link to='/'>
             <h3>&#123;CodeSprint&#125;</h3>
-          </div>
-        </Link>
+          </Link>
+        </div>
         <div className='nav-links'>
           <Link to='/Practice'>
             <p

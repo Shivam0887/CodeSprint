@@ -3,20 +3,19 @@ a {
 }
 
 .container {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+  overflow: hidden;
   width: 98vw;
   height: 88vh;
   background: rgba(255, 255, 255, 0.3);
   display: grid;
+  grid-template-columns: 20% 80%;
   margin: auto;
   border-radius: 0.5rem;
 }
 .filters {
-  position: fixed;
+  /* position: fixed; */
   display: grid;
-  margin: 1rem;
+  margin: 2rem 1rem;
   height: max-content;
   /* background: white; */
   /* border: 3px solid white; */
@@ -26,7 +25,8 @@ a {
   place-items: center;
   cursor: pointer;
   height: 50px;
-  margin: 1rem;
+  margin: 0 1rem;
+  margin-bottom: 1rem;
 }
 .filter-box :hover {
   filter: brightness(80%);
@@ -36,27 +36,31 @@ a {
 }
 .selected {
   background: rgba(255, 255, 255, 0.276);
-  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.4);
-  border-radius: 0.5rem 0;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 1rem 0 1rem 0;
 }
 .contests {
   /* background: rgba(255, 255, 255, 0.8); */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 2rem;
   row-gap: 1rem;
   margin: 2rem auto;
-  padding: 1rem 0;
-  width: 45vw;
+  padding: 1rem;
   /* border-radius: 0.5rem; */
   /* box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.4); */
 }
 .card {
   display: grid;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   border-radius: 0.5rem;
   background: white;
   width: 30vw;
+  max-width: 400px;
+  min-width: 300px;
   height: max-content;
   box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.4);
 }
@@ -67,16 +71,13 @@ a {
 .info {
   min-height: 100px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2.5fr;
   padding: 0.5rem;
   padding-right: 0;
 }
 .contestDetails {
   padding-left: 0.5rem;
   font-size: 0.9rem;
-}
-.contestDetails a {
-  text-transform: capitalize;
 }
 .logo-container {
   max-width: 10vw;
@@ -89,32 +90,81 @@ a {
   min-width: 80px;
   height: auto;
 }
+
 .contestDetails a {
   font-size: 1.3rem;
   font-weight: 600;
+  text-transform: capitalize;
   color: blue;
+  padding-bottom: 0.5rem;
 }
 .contestDetails a:hover {
   color: rgb(250, 150, 26);
 }
 /* width */
-.container::-webkit-scrollbar {
+.contests::-webkit-scrollbar {
   width: 10px;
 }
 
 /* Track */
-.container::-webkit-scrollbar-track {
+.contests::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 0.5rem;
 }
 
 /* Handle */
-.container::-webkit-scrollbar-thumb {
-  background: rgb(204, 204, 240);
+.contests::-webkit-scrollbar-thumb {
+  background: rgba(204, 204, 240, 0.711);
   border-radius: 0.5rem;
 }
 
 /* Handle on hover */
-.container::-webkit-scrollbar-thumb:hover {
+.contests::-webkit-scrollbar-thumb:hover {
   background: rgb(177, 177, 246);
+}
+@media screen and (max-width: 800px) {
+  .container {
+    display: grid;
+    grid-template-columns: none;
+    margin: auto;
+  }
+  .contests {
+    margin-top: 1rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: none;
+  }
+  .filters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1rem auto;
+    margin-bottom: 0;
+  }
+  .card {
+    width: 70vw;
+    max-width: 350px;
+  }
+  .logo-container {
+    width: 30vw;
+  }
+  .logo {
+    width: 85px;
+    max-width: 30vw;
+    height: auto;
+  }
+  .contestDetails {
+    font-size: 0.8rem;
+  }
+  .contestDetails a {
+    font-size: 1.2rem;
+  }
+  .selected {
+    border-radius: 1.5rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .container {
+    width: 98%;
+    height: 83vh;
+  }
 }
