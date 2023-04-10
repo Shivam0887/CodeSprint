@@ -1,6 +1,8 @@
 .container__ {
   position: relative;
   overflow: hidden;
+  display: grid;
+  place-items: center;
   font-family: 'Ubuntu Mono', monospace;
 }
 
@@ -40,7 +42,7 @@
   }
 }
 
-@media (max-width: 769px){
+@media (max-width: 851px){
   .card-container{
     grid-template-columns: 1fr;
   }
@@ -61,6 +63,6 @@
 @media (max-width: 426px){
   .card-container{
     margin: 30px;
-    padding: 20px 0;
+    padding: 15px 20px;
   }
 }
