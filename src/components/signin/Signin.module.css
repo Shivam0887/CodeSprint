@@ -1,0 +1,150 @@
+.form_container {
+  display: flex;
+  min-height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 8px;
+  box-shadow: 0 0 2px 2px rgb(240, 240, 240);
+  overflow: hidden;
+  user-select: none;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    0deg,
+    transparent,
+    rgb(0, 200, 255),
+    rgb(255, 0, 208)
+  );
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    0deg,
+    transparent,
+    rgb(0, 200, 255),
+    rgb(255, 0, 208)
+  );
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 316px;
+  height: 315.5px;
+  inset: 2px;
+  border-radius: 8px;
+  background-color: white;
+  z-index: 1;
+}
+
+.input_container {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.input_container .icon {
+  position: absolute;
+  top: 9px;
+  left: 4px;
+  color: white;
+  border-radius: 100%;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(0, 123, 255),
+    rgb(255, 0, 208)
+  );
+}
+
+.form_input {
+  width: 260px;
+  height: 35px;
+  padding-left: 28px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 1px solid rgb(180, 180, 180);
+  outline: none;
+}
+
+.bottom_line {
+  display: block;
+  margin: auto;
+  width: 0px;
+  transition: width 0.4s linear;
+}
+
+.form_input:focus ~ .bottom_line {
+  width: 260px;
+  border: 0.01rem solid rgb(0, 200, 255);
+}
+
+.signin_btn {
+  cursor: pointer;
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 5rem;
+  color: white;
+  background-color: rgb(0, 200, 255);
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.signin_btn:hover {
+  background-color: rgba(0, 200, 255, 0.8);
+}
+
+.signup_btn,
+.forget_btn {
+  margin-left: 10px;
+  text-decoration: none;
+  color: rgb(0, 123, 255);
+  font-weight: 500;
+}
+
+.forget_btn {
+  align-self: flex-start;
+  margin-left: 30px;
+}
+
+.signup_btn:hover,
+.forget_btn:hover {
+  color: rgb(0, 200, 255);
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

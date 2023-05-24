@@ -1,0 +1,72 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-left: 10vw;
+  row-gap: 10px;
+}
+
+.back_btn {
+  width: max-content;
+  padding: 7px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(0, 200, 255);
+  cursor: pointer;
+}
+
+.back_btn:hover {
+  background-color: rgba(0, 200, 255, 0.9);
+}
+
+.details {
+  font-weight: 500;
+  width: max-content;
+  border: none;
+  border-radius: 4px;
+  padding: 7px;
+  background-color: rgba(255, 255, 255);
+}
+
+.blog_container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-top: 20px;
+  margin-inline: auto;
+  padding: 20px;
+  width: 80vw;
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.metaData {
+  display: flex;
+  column-gap: 30px;
+  font-weight: bold;
+}
+
+#updateIcon {
+  color: green;
+  width: 20px;
+  margin-left: 10px;
+}
+
+#deleteIcon {
+  border-radius: 8px;
+  color: rgb(242, 42, 42);
+  width: 23px;
+  margin-left: 5px;
+}
+
+#updateIcon:hover {
+  cursor: pointer;
+  color: rgb(62, 151, 62);
+}
+
+#deleteIcon:hover {
+  cursor: pointer;
+  color: rgb(223, 0, 0);
+}
