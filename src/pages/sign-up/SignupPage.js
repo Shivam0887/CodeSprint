@@ -19,6 +19,7 @@ const SignupPage = () => {
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
+    setErr("");
   };
 
   const handleSubmit = async (e) => {
@@ -26,16 +27,13 @@ const SignupPage = () => {
 
     const createUser = { fname, lname, email, password, cpassword };
     try {
-      const {response} = await axios.post(
-        "https://blogapi-cgoa.onrender.com/api/auth/signup",
-        createUser
-      );
-      if(response.status)
+      const {data} = await axios.post("https://blogapi-cgoa.onrender.com/api/auth/signup", createUser);
+      if(data.status)
         navigate('/sign-in')
       else
-      setErr(response.data.message);
+        setErr(data.message);
     } catch (error) {
-      setErr(error.response.data.message);
+      console.log(error);
     }
   };
 
